@@ -3,10 +3,47 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400&family=Edu+SA+Beginner&family=Raleway:wght@300&display=swap');
+            </style>
+
         <link rel="stylesheet" href="assets/css/style.css">       
         <title>Project 2</title>
     </head>
     <body>
+        <h1 class="heading">Harry Potter Quiz-game
+            
+        </h1>
+
+        <div class="game-area">
+            <div class="control-area">
+                <button data-analys="Spelling" class="tb spellings">
+                    <img class="im hpspelling" src="/assets/images/spellings.jpg" alt="spelling">
+                </button>
+                <button data-analys="Creatures" class="tb animals">
+                    <img class="im hpowl" src="/assets/images/owl.jpg" alt="owl">
+                </button>
+                <button data-analys="events" class="tb happenings">
+                    <img class="im hphappenings" src="/assets/images/happening.jpg" alt="happenings">
+                </button>
+                
+
+                <div class="question-area">
+                    <span id="question">Choose a team</span>
+                    <span>=</span>
+                    <p class="answer">Enter your answer</p>
+                    <input id="answer-box" type="text">
+
+                </div>
+                <button data-analys="submit" class="submitbutton">Submit</button>
+                
+            </div>
+
+        </div>
+        <div class="score-area">
+            <p class="scores">Correct <span id="correct">0</span></p>
+            <p class="scores">Incorrect <span id="incorrect">0</span></p>
+        </div>
 
         <script src="/assets/js/script.js"></script>
     </body>

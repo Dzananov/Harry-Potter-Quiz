@@ -1,3 +1,99 @@
+
+
 body {
     background: #851f29;
+    font-family: 'Courier New', Courier, monospace;
+    color: #b77427;
+    text-align: center;
+}
+
+.heading {
+    font-family:inherit;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.game-area {
+    background-color: #490c12;
+    box-sizing: border-box;
+    width: 85%;
+    max-width: 50%;
+    max-height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question-area {
+    width:50%;
+    font-size: 2rem;
+    margin:auto;
+}
+
+.score-area {
+    margin: auto;
+    width: 50%;
+    font-size: small;
+}
+
+
+
+
+   
+ /*Images*/  
+.spellings {
+    margin-right: 10%;
+}
+
+.happenings {
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+/*all the buttons*/
+.tb {
+    
+    background-color:#490c12;
+    width: 20%;
+    height: 40%;
+
+    
+}
+
+.tb::after
+{
+    content: attr(data-analys);
+    
+    color: #b77427;
+    position:relative;
+    
+}
+/*questionarea where the question pops up*/
+.question-area{
+    width: 50%;
+    font-size: 2rem;
+    margin: auto;
+    padding: 50px ;
+}
+/*submit button, not the same margin,boarder and boarder-radius as love math*/
+.submitbutton {
+    margin-bottom: 50px;
+    border: transparent;
+    background-color:#8b3d45;
+    border-radius:5px;
+    
+}
+
+@media(max-width:375px) {
+    .tb {
+        margin: 0 10px;
+        padding: 5px;
+        border: 5px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .spelling{
+        width: 10%;
+    }
+
 }
