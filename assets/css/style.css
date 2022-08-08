@@ -5,6 +5,10 @@ body {
     text-align: center;
 }
 
+.hide {
+    display: none;
+}
+
 .heading {
     font-family:inherit;
     text-align: center;
