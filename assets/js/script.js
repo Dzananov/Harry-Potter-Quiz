@@ -6,10 +6,11 @@ const a = document.getElementById('a')
 const b = document.getElementById('b')
 
 
-
+myFunction()
 
 function myFunction() {
 document.getElementById("welcome").innerText = 'May the best player win';
+startgame()
 }
 
 
@@ -18,42 +19,21 @@ function startgame()
 
 
 
-	
-questionElement.innerText = thequiz.question
-a.innerText = thequiz.a
-b.innerText = thequiz.b 
+let currentQuiz = 0	
+const theQuiz = questions[currentQuiz]
+questionEl.innerText = currentQuizData.question
+a_text.innerText = answers1
+b_text.innerText = answers2
+ 
 	
 
-const questions = [
-	  {
-	    question : 'Who is Harrys best friends',
-		answer1:'Ron and Hermonie',
-		answer2:'Malfoy and Neville',
-		correctAnswer: 'Ron and Hermonie',
-	       
-	  },
-	    
-	  
-	  {
-	    question: 'What is the halfgiant, who also becomes a professor in the third book, called?',
-	    
-	      answer1 : 'Snape',
-	      answer2 : 'Hagrid',
-		  correctAnswer: 'Hagrid',
-
-	   
-	    
-	  },
-	  {
-	    question: 'Witch spell makes things fly?',
-	    
-	      answer1: 'wingardium leviosa', 
-	      answer2: 'Avada kadavra', 
-		  correctAnswer: 'wingardium leviosa',
-	      
-	    
-	  },
-	  
+const questions = ['Who is Harrys best friends','What is the halfgiant, who also becomes a professor in the third book, called?','Witch spell makes things fly?',]
+const answers1 = ['Ron and Hermonie','Snape','wingardium leviosa',]
+const answers2 = ['Malfoy and Neville','Hagrid','Avada kadavra']
+const correctanswer = ['Ron and Hermonie','Hagrid','wingardium leviosa',]	   
 		
-	 ]
+		
+
+
+
 	  
