@@ -6,34 +6,40 @@ const a = document.getElementById('a')
 const b = document.getElementById('b')
 
 
-myFunction()
 
-function myFunction() {
-document.getElementById("welcome").innerText = 'May the best player win';
-startgame()
+
+startButton.addEventListener('click', showQuestion)
+
+
+function showQuestion(question) {
+
+questionElement.innerText = question.question
+    a.innerText = question.a
+    b.innerText = question.b
 }
 
+function selectAnswers() {
+      answerElement.forEach(answerElement => answerElement.checked = false)
+  }
 
-
-function startgame()
-
-
-
-let currentQuiz = 0	
-const theQuiz = questions[currentQuiz]
-questionEl.innerText = currentQuizData.question
-a_text.innerText = answers1
-b_text.innerText = answers2
  
-	
 
-const questions = ['Who is Harrys best friends','What is the halfgiant, who also becomes a professor in the third book, called?','Witch spell makes things fly?',]
-const answers1 = ['Ron and Hermonie','Snape','wingardium leviosa',]
-const answers2 = ['Malfoy and Neville','Hagrid','Avada kadavra']
-const correctanswer = ['Ron and Hermonie','Hagrid','wingardium leviosa',]	   
-		
-		
+  const question = [
+    {
+        question: "Who is Harrys best friends",
+        a: "Hermonie and Ron",
+        b: "Malfoy and Neville",
+        
+        correct: "a",
+    },
+    {
+        question: "Who is the principal of Hogwarts",
+        a: "Snape",
+        b: "Dumbledore",
+        
+        correct: "b",
+    },
+ ];
 
 
-
-	  
+  
