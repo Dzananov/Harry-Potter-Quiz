@@ -15,7 +15,7 @@
     </head>
     <body>
         <h1 class="heading">Harry Potter Quiz-game
-            <img class="im hpspelling" src="/assets/images/spellings.jpg" alt="spelling">
+            <img class="im hpspelling" src="assets/images/spellings.jpg" alt="spelling">
             
         </h1>
         <button id="start" type="button">start</button>
@@ -23,35 +23,19 @@
         <div class="game-area">
             <button id="start" class="hide" type="button">start</button>
             <p id="welcome">Welcome</p>
-            <p id="congrats" class="hide">Congrats</p>
+            
         <div class="control-area">
-                
-                <div class="question-area">
-                    <span id="question1">Press Start</span>
-                    <span>=</span>
-                    <p class="answer">Enter your answer</p>
-                <div id="answer1">
-                    <button type="button" id="answera" class="buttona">Answer 1</button>
-                    <button type="button" id="answerb" class="buttona">Answer 2</button>
+                <div id="question-area" class= "hide">
+                    <span id="question">Press Start</span>
+                    
+                    
+                <div>
+                    <button type="button" id="answer1" class="buttona">Answer 1</button>
+                    <button type="button" id="answer2" class="buttona">Answer 2</button>
                     </div>
                     <br>
 
-                    <span id="question2">Press Start</span>
-                    <span>=</span>
-                    <p class="answer">Enter your answer</p>
-                <div id="answer2">
-                    <button type="button"  id="answerc" class="buttona">Answer 1</button>
-                    <button type="button"  id="answerd" class="buttona">Answer 2</button>
-                    </div>
-                    <br>
-
-                    <span id="question3">Press Start</span>
-                    <span>=</span>
-                    <p class="answer">Enter your answer</p>
-                <div id="answer3">
-                    <button type="button"  id="answere" class="buttona">Answer 1</button>
-                    <button type="button"  id="answerf" class="buttona">Answer 2</button>
-                    </div>
+                   
 
                 </div>
                 <button type= "button" id="submit" class="submitbutton">Submit</button>
@@ -60,10 +44,9 @@
 
         </div>
 
-        <div class="score-area">
-            <p class="scores">Correct <span id="correct">0</span></p>
-            <p class="scores">Incorrect <span id="incorrect">0</span></p>
-        </div>
+        <section id="resultSection" class="hide">
+            <span id="result"></span>
+          </section>
 
         <script src="assets/js/script.js"></script>
     </body>
