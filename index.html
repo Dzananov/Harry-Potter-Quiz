@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,14 +18,15 @@
             <img class="im hpspelling" src="assets/images/spellings.jpg" alt="spelling">
             
         </h1>
-        <button id="start" type="button">start</button>
+        
 
         <div class="game-area">
-            <button id="start" class="hide" type="button">start</button>
+            <button id="start" type="button" class="submitbutton">start</button>
             <p id="welcome">Welcome</p>
             
         <div class="control-area">
                 <div id="question-area" class= "hide">
+                    <p>Questions:</p>
                     <span id="question">Press Start</span>
                     
                     
@@ -44,9 +45,10 @@
 
         </div>
 
-        <section id="resultSection" class="hide">
-            <span id="result"></span>
-          </section>
+        <div class="score-area">
+            <p class="scores">Correct Answers <span id="score">0</span></p>
+            
+        </div>
 
         <script src="assets/js/script.js"></script>
     </body>
