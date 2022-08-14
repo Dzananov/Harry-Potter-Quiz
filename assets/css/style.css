@@ -78,14 +78,7 @@ body {
     margin: auto;
     padding: 50px ;
 }
-/*submit button, not the same margin,boarder and boarder-radius as love math*/
-.submitbutton {
-    margin-bottom: 50px;
-    border: transparent;
-    background-color:#8b3d45;
-    border-radius:5px;
-    
-}
+
 
 @media(max-width:800px) {
     .tb {

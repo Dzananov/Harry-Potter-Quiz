@@ -10,7 +10,7 @@ let correctQuestion = 0;
 /*counts correctquestions*
 *got element for starbutton,answersbuttons and submitbutton*/
 
-let startBtn = document.getElementById("start");
+
 let answer1 = document.getElementById("answer1");
 let answer2 = document.getElementById("answer2");
 let submit = document.getElementById("submit");
@@ -18,10 +18,10 @@ let questionarea = document.getElementById('question-area')
 
 /*calling events when clicked on*
 *The first one calls the displayquestionfucntion etc...*/
-startBtn.addEventListener('click', displayNextQuestion);
+
 answer1.addEventListener('click', selectedAnswer);
 answer2.addEventListener('click', selectedAnswer);
-submit.addEventListener('click', selectedAnswer);
+
 
 /*Here are the questions shown*/
 function displayNextQuestion() {
@@ -35,19 +35,26 @@ function displayNextQuestion() {
   } 
 
 /*submitbutton apears when user choose an answer*/
-function selectedAnswer(element) {
+function selectedAnswer(Event) {
   
-  selectedAnswer = element.innerText;
+  selectedAnswer = Event.currentTarget.innerText
    /*This code for my scoreboard is from the Love-math project
  For every right answer the scorepoint rises*/
   let q = QUESTION[currentQuestion];
-  if (selectedAnswer === QUESTION.correct) 
-
+  if (selectedAnswer === q.correct) 
+    
   
    { let oldScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++oldScore;
+    correctQuestion ++;
   }
   currentQuestion++;
   
-  displayNextQuestion()
+  if (currentQuestion < QUESTION.length ) {
+    displayNextQuestion()
+    } else {
+    alert("you've got " + correctQuestion)
+    }
 }
+
+displayNextQuestion()
