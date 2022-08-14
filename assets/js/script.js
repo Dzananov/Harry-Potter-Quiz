@@ -1,66 +1,53 @@
-const startButton = document.getElementById('start')
-const submitButton = document.getElementById ('submit')
-const congrats = document.getElementById ('congrats')
-var rightAnswera = document.getElementById('answera')
-var rightAnswerd = document.getElementById('answerd')
-var rightAnswere = document.getElementById('answere')
-var wrongAnswerb = document. getElementById('answerb')
-var wrongAnswerc = document. getElementById('answerc')
-var wrongAnswerf = document. getElementById('answerf')
+const QUESTION = [{"question": "Who is Harrys best friends",  "answer1" : "Hermonie and Ron","answer2": "Malfoy and Neville", "correct": "Hermonie and Ron"}, {"question": "Who is ther principal of Hogwarts?",  "answer1" : "Snape", "answer2": "Dumbeldore", "correct":"Dumbeldore"}]
 
-startButton.addEventListener('click', startGame)
-
-let score = 0
-
- 
+/*Questioncount*/
+let currentQuestion = 0;
+let correctQuestion = 0;
 
 
-function startGame() {
-  var question1 = document.getElementById ('question1'). innerHTML = "Who is Harrys best friends"
-  var answer1 = document.getElementById ('answera'). innerHTML = 'Hermonie And Ron'
-  var answer2 = document.getElementById ('answerb'). innerHTML = 'Malfoy and Neville'
-  rightAnswera.addEventListener('click', changeColor1)
-  wrongAnswerb.addEventListener ('click', changeC1)
-  var question2 = document.getElementById ('question2'). innerHTML = "Who is the principal of Hogwarts"
-  var answer3 = document.getElementById ('answerc'). innerHTML = 'Snape'
-  var answer4 = document.getElementById ('answerd'). innerHTML = 'Dumbledor'
-  rightAnswerd.addEventListener('click',changeColor2)
-  wrongAnswerc.addEventListener ('click', changeC2)
-  var question3 = document.getElementById ('question3'). innerHTML = "What is Harrys Owl called"
-  var answer5 = document.getElementById ('answere'). innerHTML = 'Hedwig'
-  var answer6 = document.getElementById ('answerf'). innerHTML = 'Scabbers'
-  rightAnswere.addEventListener('click',changeColor3)
-  wrongAnswerf.addEventListener ('click', changeC3)
 
 
-}
+/*counts correctquestions*
+*got element for starbutton,answersbuttons and submitbutton*/
 
-function changeColor1() {
-  rightAnswera.style.backgroundColor = 'lightgreen';
-  score++
+let startBtn = document.getElementById("start");
+let answer1 = document.getElementById("answer1");
+let answer2 = document.getElementById("answer2");
+let submit = document.getElementById("submit");
+let questionarea = document.getElementById('question-area')
+
+/*calling events when clicked on*
+*The first one calls the displayquestionfucntion etc...*/
+startBtn.addEventListener('click', displayNextQuestion);
+answer1.addEventListener('click', selectedAnswer);
+answer2.addEventListener('click', selectedAnswer);
+submit.addEventListener('click', selectedAnswer);
+
+/*Here are the questions shown*/
+function displayNextQuestion() {
+  let q = QUESTION[currentQuestion];
+  document.getElementById("question-area").classList.remove('hide')
+   document.getElementById("question").innerText = q.question;
+   document.getElementById("answer1").innerText = q.answer1;
+   document.getElementById("answer2").innerText = q.answer2;
+   
+   
+  } 
+
+/*submitbutton apears when user choose an answer*/
+function selectedAnswer(element) {
   
-}
-function changeColor2 () {
-  rightAnswerd.style.backgroundColor = 'lightgreen';
-}
+  selectedAnswer = element.innerText;
+   /*This code for my scoreboard is from the Love-math project
+ For every right answer the scorepoint rises*/
+  let q = QUESTION[currentQuestion];
+  if (selectedAnswer === QUESTION.correct) 
 
-
-function changeColor3 () {
-  rightAnswere.style.backgroundColor = 'lightgreen';
-
-}
-
-function changeC1 () {
-  wrongAnswerb.style.backgroundColor = 'red';
   
-}
-
-function changeC2 () {
-  wrongAnswerc.style.backgroundColor = 'red';
+   { let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++oldScore;
+  }
+  currentQuestion++;
   
-}
-
-function changeC3 () {
-  wrongAnswerf.style.backgroundColor = 'red';
-  
+  displayNextQuestion()
 }
