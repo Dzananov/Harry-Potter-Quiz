@@ -1,8 +1,13 @@
-const QUESTION = [{"question": "Who is Harrys best friends",  "answer1" : "Hermonie and Ron","answer2": "Malfoy and Neville", "correct": "Hermonie and Ron"}, {"question": "Who is ther principal of Hogwarts?",  "answer1" : "Snape", "answer2": "Dumbeldore", "correct":"Dumbeldore"}]
+const QUESTION = [{"question": "Who is Harrys best friends",  "answer1" : "Hermonie and Ron","answer2": "Malfoy and Neville", "correct": "Hermonie and Ron"}, 
+{"question": "Who is ther principal of Hogwarts?",  "answer1" : "Snape", "answer2": "Dumbeldore", "correct":"Dumbeldore"},
+{"question": "What is Harrys owl called?",  "answer1" : "Hedwig", "answer2": "Dolores", "correct":"Hedwig"},
+{"question": "Wich proffessor can turn into a cat?",  "answer1" : "Nymphadora Tonks", "answer2": "Minerva McGonagall", "correct":"Minerva McGonagall"},]
 
 /*Questioncount*/
 let currentQuestion = 0;
 let correctQuestion = 0;
+
+let reset = document.getElementById("reset")
 
 
 
@@ -21,6 +26,7 @@ let questionarea = document.getElementById('question-area')
 
 answer1.addEventListener('click', selectedAnswer);
 answer2.addEventListener('click', selectedAnswer);
+reset.addEventListener('click', restart)
 
 
 /*Here are the questions shown*/
@@ -30,6 +36,7 @@ function displayNextQuestion() {
    document.getElementById("question").innerText = q.question;
    document.getElementById("answer1").innerText = q.answer1;
    document.getElementById("answer2").innerText = q.answer2;
+   
    
    
   } 
@@ -53,8 +60,21 @@ function selectedAnswer(Event) {
   if (currentQuestion < QUESTION.length ) {
     displayNextQuestion()
     } else {
-    alert("you've got " + correctQuestion)
+      document.getElementById("resultSection").classList.remove('hide')
     }
-}
+  }
+
+  function restart() {
+    displayNextQuestion();
+    selectedAnswer()
+  }
+
+
+  // function reset (){
+
+  
+//     alert("you've got " + correctQuestion)
+//     }
+// }
 
 displayNextQuestion()

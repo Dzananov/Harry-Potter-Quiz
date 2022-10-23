@@ -1,59 +1,43 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400&family=Edu+SA+Beginner&family=Raleway:wght@300&display=swap');
-            </style>
-
-        <link rel="stylesheet" href="assets/css/style.css">
-        
-        
-
-        <title>Project 2</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400&family=Edu+SA+Beginner&family=Raleway:wght@300&display=swap');
+    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Project 2</title>
+</head>
+<body>
+    <section></section>
         <h1 class="heading">Harry Potter Quiz-game
             <img class="im hpspelling" src="assets/images/spellings.jpg" alt="spelling">
-            
         </h1>
-        
-
         <div class="game-area">
-           
-            <p id="welcome">Welcome</p>
-            
+           <p id="welcome">Welcome</p>
         <div class="control-area">
-                <div id="question-area" class= "hide">
-                    <p>Questions:</p>
-                    <span id="question">Press Start</span>
-                    
-                    
+            <div id="question-area" class= "hide">
+                <p>Questions:</p>
+                <span id="question">Press Start</span>
                 <div>
                     <button type="button" id="answer1" class="buttona">Answer 1</button>
                     <button type="button" id="answer2" class="buttona">Answer 2</button>
-                    </div>
-                    <br>
-
-                   
-
                 </div>
-                
-                
+                <br>
+                </div>
             </div>
-
         </div>
-
         <div class="score-area">
             <p class="scores">Correct Answers <span id="score">0</span></p>
-            
         </div>
-
-        <section id="resultSection" class="hide">
+    </section>
+    <section id="resultSection" class="hide">
             <span id="result"></span>
-          </section>
-
-        <script src="assets/js/script.js"></script>
-    </body>
+            <p class="scores">Correct Answers <span id="score">0</span></p>
+            <button type="button" id="reset" class="buttona">Reset Game</button>
+            
+    </section>
+<script src="assets/js/script.js"></script>
+</body>
 </html>
