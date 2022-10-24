@@ -61,6 +61,7 @@ function selectedAnswer(Event) {
     displayNextQuestion()
     } else {
       document.getElementById("resultSection").classList.remove('hide')
+      
     }
   }
 
