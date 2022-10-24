@@ -1,47 +1,74 @@
-<h1>Project 2</h1>
-<h2>Purpose of the project</h2>
-The purpose is to creat a fun and interesting quiz about the magical world of Harry Potter.
+# Welcome to makarska
 
-<h2>Features</h2>
-User can see the firs question on the screen. When clicked on an answer the next answer will show.  The scores are increased when right answer is clicked ad you go along.
+<p>If you are a Harry Potter fan and know everything about Harry Potter and his magical World, you should absolutly try this quiz game based on the books of Harry potter. User will be provided with 15 questions about Harry Potter and his magical world. Se how many you can score correct answer on.</p>
 
 
-<h2>future features</h2>
-More questions can be added later on and a result display.
 
 
-<h2>technology</h2>
--Gitpod
--Github
+## User Stories
+<p>User will be provided with the game questions directly. User will answer a question with 2 answer options. The game redirects automaticly to the next question. When the user has answerd the last question player will be provided with their score and a option to restart the game.</p>
+<br>
+
+### Features
+* A game area containing question and answer options
+ * Two buttons containing the answer options
+* After finished game the scoreboard will appear with scores in correct answers 
+ * A restart button will appear that rests the game
 
 
-<h2>Testing</h2> 
-<h3>Code Validation</h3> 
 
-  - HTML Validator without errors
-  ![bild](/assets/images/html.validator.jpg)
+### Future Features
 
-  -CSS Validator
-   ![bild](/assets/images/valdiationcss.jpg)
+* Add a scoreboard with questions and right answers so user can se wich questions they got wrong
+* Add levels with: "easy questions and hard questions" that user csn choose between
+<br>
 
-<h3>Bugs</h3>
--When teh source to the js script was written an "/" was added before the "assets" and the javascript file did not connect with the HTML page well.
-<h3>Unfixed Bugs</h3>
--No unfixed Bugs
-<h3>Test cases</h3>
+## Wireframe
 
-![bild](/assets/images/page.jpg)
+My original wireframe was an easy and clean design. When I got it on screen I added some changes.
+WHAT CHSAGES
 
-<h3>Supported screens</h3>
--Iphone SE
--Laptop screen
-<h2>Deployment</h2> 
-<h3>Via github</h3>
-Went to my home page, choose my project: clicked on it
-In the menu abow you can se a 'setting' button to the left. Clicked on it.
-On the new page I clicked on the scroller menu and chose 'main'
-<h3>Via gitpod</h3>
-in the terminal I wrote "python3 -m http.server" and then choose "open browser"
-   
-<h2>Credits</h2>
--Code for my scoreboard is from the love-math project
+PICTURE
+
+## Technology
+
+* Github to store my repostories
+* Gitpod used to work with my HTML,CSS and javascript codes on
+* W3C Validator to validat my HTML codes
+* CSS Validator to validate my CSS codes
+* HTML for codes to build the webpage
+* CSS codes for styling
+* Javascript for functions
+<br>
+
+## Testing
+
+
+### Bugs
+
+
+
+### Unfixed bugs
+No unfixed bugs
+
+### Screen testing
+Tested on screens:
+  
+  * Webbrowser
+  * Iphone SE
+  * Ipad Mini
+
+## Deployment
+
+* Deployment on github: I went to mo reposistoris and clicked on my project. Then went to settings--pages and than choose "main" in the scroll bar in the branch section. Then clicked save.
+
+* On gitpod:First I choose "terminal" from the bar to the top left. There I chose "New terminal" to have one more terminal to work with. Then I wrote "python3 -m http.server" in the first terminal and enter.
+
+## Credits
+* Code Institution for educational material
+* My mentor for guidance in the makinig of my project
+
+
+### Media
+  
+   The free photos where taken from pexels  
