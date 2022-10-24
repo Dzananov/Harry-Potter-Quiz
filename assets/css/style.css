@@ -8,7 +8,7 @@ body {
 #hero {
     width: 100%;
     height: 100vh;
-    background: url("assets/images/hogwartstrain.jpg") top center;
+    background: url("../images/hogwartstrain.jpg") top center;
     background-size: cover;
     position: relative;
     padding: 0;

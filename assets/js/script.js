@@ -61,13 +61,21 @@ function selectedAnswer(Event) {
     displayNextQuestion()
     } else {
       document.getElementById("resultSection").classList.remove('hide')
+      document.getElementById("question-area").classList.add("hide")
       
     }
   }
 
   function restart() {
+
+    currentQuestion = 0;
+    correctQuestion = 0;
+    document.getElementById("score").innerText = 0
+    document.getElementById("resultSection").classList.add('hide')
+    document.getElementById("question-area").classList.remove("hide")
     displayNextQuestion();
-    selectedAnswer()
+    
+    
   }
 
 
