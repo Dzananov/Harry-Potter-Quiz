@@ -1,10 +1,7 @@
-
-
-
 body {
     background: #851f29;
-    font-family: 'Courier New', Courier, monospace;
-    color: #0b0908;
+    font-family: 'Raleway';
+    color: #f3eeeb;
     text-align: center;
 }
 
@@ -29,13 +26,15 @@ body {
 }
 
 .game-area {
-    background-color: #490c12;
+    background-color: #74141e;
     box-sizing: border-box;
     width: 85%;
     max-width: 50%;
     max-height: 70%;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 
 .question-area {
