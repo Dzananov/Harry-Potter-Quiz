@@ -8,6 +8,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Harry Potter quiz</title>
 </head>
@@ -21,15 +22,21 @@
         </section>
         <section>
             <div class="game-area" id="gameArea">
-            <p id="welcome">Welcome</p>
-           
+                <section id="resultSection" class="hide">
+                    <button type="button" id="reset" class="buttona">Reset Game</button>
+                    <div class="score-area">
+                        <p class="scores">Correct Answers <span id="score">0</span></p>
+                    </div>
+                </section>
             <div class="control-area">
                 <div id="question-area" class= "hide">
                     <p>Questions:</p>
                     <span id="question">Press Start</span>
+                    <br>
+                    <p> Answer Options:</p>
                     <div>
-                        <button type="button" id="answer1" class="buttona">Answer 1</button>
-                        <button type="button" id="answer2" class="buttona">Answer 2</button>
+                        <button type="button" id="answer1" class="btn btn-warning">Answer 1</button>
+                        <button type="button" id="answer2" class="btn btn-warning">Answer 2</button>
                     </div>
                     <br>
                 </div>
@@ -38,12 +45,7 @@
             </div>
             
         </section>
-        <section id="resultSection" class="hide">
-            <button type="button" id="reset" class="buttona">Reset Game</button>
-            <div class="score-area">
-                <p class="scores">Correct Answers <span id="score">0</span></p>
-            </div>
-        </section>
+       
         
     </section>
    
