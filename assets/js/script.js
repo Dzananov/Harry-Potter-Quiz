@@ -9,10 +9,13 @@ const QUESTION = [{"question": "Who is Harrys best friends",  "answer1" : "Hermo
 {"question": "Who is Sirius Black?",  "answer1" : "Harrys godfather", "answer2": "a runnaway convict", "correct":"Harrys godfather"},
 {"question": "Wich positions does Harry have in quiddich?",  "answer1" : "Chaser", "answer2": "Seeker", "correct":"Seeker"},
 {"question": "Wich spell can make things fly?",  "answer1" : "avada kadavra", "answer2": "Wingardium leviosa", "correct":"Wingardium leviosa"},];
-
+startGame()
 function startGame(){
-  document.getElementById("start").classList.remove('hide');
+  console.log("Test")
   document.getElementById("question-area").classList.add('hide');
+  document.getElementById("start").classList.remove('hide');
+  
+
 } 
 
 /*Questioncount and counter for correct answers*/
@@ -36,10 +39,10 @@ start.addEventListener('click', displayNextQuestion);
 
 /*The first function calls the startbutton when user clicks on the startbutton questionarea will be shown and
 game will start*/
-function startGame(){
-  document.getElementById("start").classList.remove('hide');
-  document.getElementById("question-area").classList.add('hide');
-}
+// function startGame(){
+//   document.getElementById("start").classList.remove('hide');
+//   document.getElementById("question-area").classList.add('hide');
+// }
 /* In this function question and answers will be shown and the user can click on wichever answer he/she think is correct. ext
 question will be shown directly after*/
 function displayNextQuestion() {
@@ -80,5 +83,4 @@ function selectedAnswer(Event) {
     document.getElementById("question-area").classList.remove("hide");
     displayNextQuestion();
   }
-startGame()
-displayNextQuestion()
+
