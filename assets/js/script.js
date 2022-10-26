@@ -39,10 +39,6 @@ start.addEventListener('click', displayNextQuestion);
 
 /*The first function calls the startbutton when user clicks on the startbutton questionarea will be shown and
 game will start*/
-// function startGame(){
-//   document.getElementById("start").classList.remove('hide');
-//   document.getElementById("question-area").classList.add('hide');
-// }
 /* In this function question and answers will be shown and the user can click on wichever answer he/she think is correct. ext
 question will be shown directly after*/
 function displayNextQuestion() {

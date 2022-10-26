@@ -36,17 +36,43 @@ PICTURE
 * Gitpod used to work with my HTML,CSS and javascript codes on
 * W3C Validator to validat my HTML codes
 * CSS Validator to validate my CSS codes
+* JS validator JS HINTS
 * HTML for codes to build the webpage
 * CSS codes for styling
 * Javascript for functions
 <br>
 
-## Testing
+## Testing and Bugs
+#### Startpage
+![bild](assets/images/startjs.jpg)
+<br>
+<p>First page user will see is the startbutton. Tests preformed on the startbutton:
+ * Pressing the button that will redirect user to the game.
+Bugs detected during this step:
+ * I problem detected in the beginning, the startbutton was not shown in the beginning as is should. I looked trough my javascript functions and traced every step from code to screen and saw that at the end the displayNextQuestion function was called as the first function to render. When I changed this to insted state startGame as first function, my code worked.</p>
 
+![bild](assets/images/bugstartjs.jpg)
 
-### Bugs
+![bild](assets/images/questionsjs.jpg)
+<br>
+<p>Questionarea is showed with a question and answer otpions, tests I preformed:
+ 
+ * Pressing any button to get redirected. Buttons worked fine and I got redriected.</p>
 
+ ![bild](assets/images/correctjs.jpg)
+ <br>
+ <p>The page should show scorepoints and a "Reset button". Tests I preformed:
+  
+  * Trying to press Reset button after seeing scorepoint. Workes as it should.
+Bugs detected
+  * The Resetbutton was not showing. Viewd first the function and it looked proper. In the CSS file the bug was detected. There was a spelling error in the class of the section containing "Reset Game" button. Class of 'Hint' spelled Hint insted of .Hint. The dot was missing. When fixed it worked.
+  </p>
 
+ ![bild](assets/images/resetjs.jpg)
+ <br>
+ <p>Resetbutton should render user back to question-area. Tests preformed:
+  
+  * Pressed the button and got redirected to question-area. Code workes as it is supposed/p>
 
 ### Unfixed bugs
 No unfixed bugs
@@ -58,6 +84,19 @@ Tested on screens:
   * Iphone SE
   * Ipad Mini
 
+### Validator
+![bild](assets/images/validatorjs.jpg)
+
+* Use strict argument was detected as an error in the validator. The code worked fine without the Use Strict argument and the app was not yet that big that I needed to write that secure Javascript.
+
+![bild](assets/images/validationcss.jpg)
+
+* o errors at the CSS validator
+
+![bild](assets/images/htmlvalidatorsjs.jpg)
+
+* o errors detected on the HTML validator
+
 ## Deployment
 
 * Deployment on github: I went to mo reposistoris and clicked on my project. Then went to settings--pages and than choose "main" in the scroll bar in the branch section. Then clicked save.
@@ -67,6 +106,7 @@ Tested on screens:
 ## Credits
 * Code Institution for educational material
 * My mentor for guidance in the makinig of my project
+* 
 
 
 ### Media
