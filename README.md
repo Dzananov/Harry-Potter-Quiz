@@ -6,12 +6,20 @@
 
 
 ## User Stories
-<p>User will be provided with the game questions directly. User will answer a question with 2 answer options. The game redirects automaticly to the next question. When the user has answerd the last question player will be provided with their score and a option to restart the game.</p>
+
+* User can navigate trough the navbar menu containing the Game and a section for Rules.
+* User can press button start game to start the game and see the questions
+* User can choose between answer options
+* User can press on 'next' button to go on to the next question. User can only go on to next question if the first one is answerd
+* User can see their scorepoints at the end of the game
+* User can press restart game at the end of the game. User will then be redirected to the beginning.
 <br>
 
 ### Features
+* A start button that starts the game
 * A game area containing question and answer options
  * Two buttons containing the answer options
+ * Also a next button so user can choose when to go on
 * After finished game the scoreboard will appear with scores in correct answers 
  * A restart button will appear that rests the game
 
@@ -23,12 +31,6 @@
 * Add levels with: "easy questions and hard questions" that user csn choose between
 <br>
 
-## Wireframe
-
-My original wireframe was an easy and clean design. When I got it on screen I added some changes.
-WHAT CHSAGES
-
-PICTURE
 
 ## Technology
 
@@ -43,42 +45,41 @@ PICTURE
 <br>
 
 ## Testing and Bugs
-#### Startpage
+
+### Testing
+
+|Test | What to do | Status |
+|----|:---------|:-------|
+|Tested my navbar | I clicked on 'Game' and then I scrolled back up and clicked on 'Rules*  | good |
+|Tested my startbutton| I clicked on the 'Game' link in the menu bar. Then I pressed the yellow 'Start' button that should start the game.| good |
+|Try to press an option answer| When the game area is shown, question and answer will be showen. Tried pressing an answer option to se if the 'Next' button will show that is supposed to redirect user to next question when pressed| good |
+|Pressing the 'Next' button without choosing an answer.| I first try pressing the 'next' button before I press on any answer option, to se if the button will work. It is not supposed to work before user chooses an answer, as mentioned in the rules| good |
+|Pressing 'next' button after choosing an answer | I answer the question by pressing one of the two options and the I clicked on the 'next' button| good |
+|Se score| Because I knew the answers I answerd some wrong and some right to se if my scorepoint is showing the right scores| good |
+|Restart| After the game ended I try to press the 'restart' button to reset the game | good |
+
+
+#### Testcase 1(Changes done after this image was taken: Added navbar.)
 ![bild](assets/images/startjs.jpg)
-<br>
-<p>First page user will see is the startbutton. Tests preformed on the startbutton:
- * Pressing the button that will redirect user to the game.
-Bugs detected during this step:
+
+#### Testcase 1 and 3-5
+![bild](assets/images/navbarand.jpg)
+
+#### Testcase 6-7
+![bild](assets/images/correctjs.jpg)
+![bild](assets/images/resetjs.jpg)
+
+###  Bugs
  * I problem detected in the beginning, the startbutton was not shown in the beginning as is should. I looked trough my javascript functions and traced every step from code to screen and saw that at the end the displayNextQuestion function was called as the first function to render. When I changed this to insted state startGame as first function, my code worked.</p>
 
 ![bild](assets/images/bugstartjs.jpg)
 
-![bild](assets/images/questionsjs.jpg)
-<br>
-<p>Questionarea is showed with a question and answer otpions, tests I preformed:
- 
- * Pressing any button to get redirected. Buttons worked fine and I got redriected.</p>
-
- ![bild](assets/images/correctjs.jpg)
- <br>
- <p>The page should show scorepoints and a "Reset button". Tests I preformed:
-  
-  * Trying to press Reset button after seeing scorepoint. Workes as it should.
-Bugs detected
-  * The Resetbutton was not showing. Viewd first the function and it looked proper. In the CSS file the bug was detected. There was a spelling error in the class of the section containing "Reset Game" button. Class of 'Hint' spelled Hint insted of .Hint. The dot was missing. When fixed it worked.
-  </p>
-
- ![bild](assets/images/resetjs.jpg)
- <br>
- <p>Resetbutton should render user back to question-area. Tests preformed:
-  
-  * Pressed the button and got redirected to question-area. Code workes as it is supposed/p>
 
 ### Unfixed bugs
 No unfixed bugs
 
 ### Screen testing
-Tested on screens:
+The pages should be responsive and work on all screens. I Tested it on a couple of differente screens:
   
   * Webbrowser
   * Iphone SE
@@ -89,24 +90,26 @@ Tested on screens:
 
 * Use strict argument was detected as an error in the validator. The code worked fine without the Use Strict argument and the app was not yet that big that I needed to write that secure Javascript.
 
-![bild](assets/images/validationcss.jpg)
+![bild](assets/images/valdiationcss.jpg)
 
 * o errors at the CSS validator
 
-![bild](assets/images/htmlvalidatorsjs.jpg)
+![bild](assets/images/htmlvalidatorjs.jpg)
 
 * o errors detected on the HTML validator
 
 ## Deployment
 
-* Deployment on github: I went to mo reposistoris and clicked on my project. Then went to settings--pages and than choose "main" in the scroll bar in the branch section. Then clicked save.
+### Github
+ Deployment on github: I went to mo reposistoris and clicked on my project. Then went to settings--pages and than choose "main" in the scroll bar in the branch section. Then clicked save.
 
-* On gitpod:First I choose "terminal" from the bar to the top left. There I chose "New terminal" to have one more terminal to work with. Then I wrote "python3 -m http.server" in the first terminal and enter.
+### Gitpod
+ On gitpod:First I choose "terminal" from the bar to the top left. There I chose "New terminal" to have one more terminal to work with. Then I wrote "python3 -m http.server" in the first terminal and enter.
 
 ## Credits
 * Code Institution for educational material
 * My mentor for guidance in the makinig of my project
-* 
+* Loverunning project for footer code
 
 
 ### Media
