@@ -13,10 +13,24 @@
     <title>Harry Potter quiz</title>
 </head>
 <body>
-    <section id="hero">
+    <header>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#gameArea">GameArea</a>
+                </li>
+                <li>
+                    <a href="#Rules">Rule</a>
+                </li>
+            </ul>
+        </nav>
+        <br>
         <h1 class="heading">Harry Potter Quiz-game</h1>
-        <div>
-            <div class="game-area" id="gameArea">
+    </header>
+    
+    <section id="hero">
+        <div class="game-area" id="gameArea">
+            <div>
                 <div id="resultSection" class="hide">
                     <button type="button" id="reset" class="btn btn-warning">Reset Game</button>
                     <div class="score-area">
@@ -37,11 +51,35 @@
                         <button type="button" id="answer2" class="btn btn-warning">Answer 2</button>
                     </div>
                     <br>
+                    <div>
+                        <button type="button" id="next" class="btn btn-warning hide">next Question</button>
+                    </div>
                 </div>
             </div>
             </div>
         </div>
     </section>
+    <section>
+        <h1 id="Rules">Game Rules</h1>
+        <p>
+            <ul class="game-area">
+                <li>10 questions</li>
+                <li>You have to answer the current question to go on to next</li>
+                <li>You have to answer all questions to be able to se your score</li>
+                <li>Score will only show how many questions you have answerd correct</li>
+            </ul>
+        </p>
+    </section>
+    <footer>
+        <!--The "find us on" codes with links to facebook, instagram and twitter is from the loverunning project-->
+                <span>Find us on:</span>
+        
+                <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Find us on Facebook (link opens in a new tab)">Facebook</a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Find us on Instagram (link opens in a new tab)">Instagram</a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener" aria-label="Find us on Twitter (link opens in a new tab)">Twitter</a>
+        
+                <p>Copyright © Welcome to Makarska 2022</p>
+            </footer>
    
 <script src="assets/js/script.js"></script>
 </body>

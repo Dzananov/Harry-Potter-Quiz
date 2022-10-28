@@ -9,9 +9,9 @@ const QUESTION = [{"question": "Who is Harrys best friends",  "answer1" : "Hermo
 {"question": "Who is Sirius Black?",  "answer1" : "Harrys godfather", "answer2": "a runnaway convict", "correct":"Harrys godfather"},
 {"question": "Wich positions does Harry have in quiddich?",  "answer1" : "Chaser", "answer2": "Seeker", "correct":"Seeker"},
 {"question": "Wich spell can make things fly?",  "answer1" : "avada kadavra", "answer2": "Wingardium leviosa", "correct":"Wingardium leviosa"},];
-startGame()
+startGame();
 function startGame(){
-  console.log("Test")
+  console.log("Test");
   document.getElementById("question-area").classList.add('hide');
   document.getElementById("start").classList.remove('hide');
   
@@ -29,12 +29,14 @@ let submit = document.getElementById("submit");
 let questionarea = document.getElementById('question-area');
 let reset = document.getElementById("reset");
 let start = document.getElementById("start");
+let next = document.getElementById("next");
 
 /*calling events when clicked on*/
 answer1.addEventListener('click', selectedAnswer);
 answer2.addEventListener('click', selectedAnswer);
 reset.addEventListener('click', restart);
 start.addEventListener('click', displayNextQuestion);
+next.addEventListener('click', displayNextQuestion);
 
 
 /*The first function calls the startbutton when user clicks on the startbutton questionarea will be shown and
@@ -62,7 +64,8 @@ function selectedAnswer(Event) {
     }
   currentQuestion++;
   if (currentQuestion < QUESTION.length ) {
-    displayNextQuestion();
+    document.getElementById("next").classList.remove('hide');
+    
     } else {
       document.getElementById("resultSection").classList.remove('hide');
       document.getElementById("question-area").classList.add("hide");
